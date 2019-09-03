@@ -2,10 +2,10 @@
 import cmd from "commander";
 
 cmd
-  .command("enc <str>")
+  .command("enc <str...>")
   .description("Encode string to base64")
   .action(str => {
-    const buff = Buffer.from(str);
+    const buff = Buffer.from(str.join(" "));
     console.log(buff.toString("base64"));
   });
 
