@@ -1,11 +1,13 @@
 {
   "name": "@nazieb/str",
-  "description": "",
+  "description": "Small CLI app to converting strings from and to various formats",
   "bin": "dist/index.js",
+  "version": "0.1.0",
   "scripts": {
     "build": "babel src -d dist && chmod +x dist/*.js",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "release": "standard-version"
   },
   "dependencies": {
     "change-case": "^3.1.0",
@@ -25,6 +27,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "husky": "^3.0.0",
     "jest": "^24.8.0",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "standard-version": "^7.0.0"
   }
 }
