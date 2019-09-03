@@ -1,6 +1,11 @@
 {
   "name": "@nazieb/str",
   "description": "Small CLI app to converting strings from and to various formats",
+  "author": {
+    "name": "Ainun Nazieb",
+    "url": "https://github.com/nazieb"
+  },
+  "license": "MIT",
   "bin": "dist/index.js",
   "version": "0.1.0",
   "scripts": {
