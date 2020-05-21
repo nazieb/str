@@ -1,5 +1,5 @@
 # str
-`str` is a small CLI app to converting strings from and to various formats
+`str` is a small CLI app for converting strings from and to various formats
 
 ## Installation
 ```

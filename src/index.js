@@ -10,7 +10,8 @@ cmd
     "unix",
     "Convert UNIX timestamp to human readable format, and vice-versa",
     { executableFile: "unix" }
-  );
+  )
+  .command("rand", "Generate random string", { executableFile: "rand" });
 
 if (!process.argv.slice(2).length) {
   cmd.outputHelp();
