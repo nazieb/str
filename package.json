@@ -5,6 +5,7 @@
     "name": "Ainun Nazieb",
     "url": "https://github.com/nazieb"
   },
+  "repository": "https://github.com/nazieb/str",
   "license": "MIT",
   "bin": "dist/index.js",
   "version": "0.1.2",
@@ -16,7 +17,10 @@
   },
   "dependencies": {
     "change-case": "^3.1.0",
+    "clipboardy": "^2.3.0",
     "commander": "^3.0.1",
+    "shortid": "^2.2.15",
+    "uuid": "^8.0.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
