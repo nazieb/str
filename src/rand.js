@@ -2,7 +2,7 @@
 import cmd from "commander";
 import shortid from "shortid";
 import { v1 as uuidv1, v4 as uuidv4 } from "uuid";
-import output from "./output";
+import { error, output } from "./output";
 
 cmd.arguments("<method>").action(method => {
   switch (method) {
@@ -20,8 +20,7 @@ cmd.arguments("<method>").action(method => {
       break;
 
     default:
-      output(`Unknown method ${method}`);
-      process.exit(1);
+      error(`Unknown method ${method}`);
   }
 });
 

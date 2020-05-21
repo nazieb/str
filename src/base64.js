@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 import cmd from "commander";
+import { output } from "./output";
 
 cmd
   .command("enc <str...>")
   .description("Encode string to base64")
   .action(str => {
     const buff = Buffer.from(str.join(" "));
-    console.log(buff.toString("base64"));
+    output(buff.toString("base64"));
   });
 
 cmd
@@ -14,7 +15,7 @@ cmd
   .description("Decode base64 string")
   .action(str => {
     const buff = Buffer.from(str, "base64");
-    console.log(buff.toString());
+    output(buff.toString());
   });
 
 cmd.parse(process.argv);

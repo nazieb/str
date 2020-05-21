@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 import cmd from "commander";
 import strCase from "change-case";
+import { output, error } from "./output";
 
 cmd.arguments("<casing> <str...>").action((casing, str) => {
   const method = `${casing}Case`;
 
   if (typeof strCase[method] !== "function") {
-    console.log("Invalid case");
-    process.exit(1);
+    error("Invalid case");
   }
 
-  console.log(strCase[method](str.join(" ")));
+  output(strCase[method](str.join(" ")));
 });
 
 cmd.parse(process.argv);

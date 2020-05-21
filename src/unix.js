@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import cmd from "commander";
+import { error, output } from "./output";
 
 cmd.arguments("<str...>").action(str => {
   const input = str.join(" ");
@@ -11,14 +12,13 @@ cmd.arguments("<str...>").action(str => {
     try {
       date = new Date(input);
     } catch (e) {
-      console.log("Invalid date format");
-      process.exit(1);
+      error("Invalid date format");
     }
 
-    console.log(Math.floor(date.getTime()) / 1000);
+    output(Math.floor(date.getTime()) / 1000);
   } else {
     const date = new Date(number * 1000);
-    console.log(date.toISOString());
+    output(date.toISOString());
   }
 });
 
