@@ -8,7 +8,7 @@
   "repository": "https://github.com/nazieb/str",
   "license": "MIT",
   "bin": "dist/index.js",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "scripts": {
     "build": "babel src -d dist && chmod +x dist/*.js",
     "test": "jest",
